@@ -1,7 +1,37 @@
-h1. git-fetch-hook
+h1. git-pull-hook
 
-This is a Sinatra simple app that accepts POST requests from "GitHub":http://github.com "post-receive-hooks":http://github.com/guides/post-receive-hooks and performs a @git fetch@ in the corresponding local git repository.
+This is a Sinatra simple app that accepts POST requests from "GitHub":http://github.com "post-receive-hooks":http://github.com/guides/post-receive-hooks and performs a @git pull origin master@ in the corresponding local git repository.
+
+h2. Work in Progress
+
+This is just a quick and dirty hack, and it sure has security issues. I'd appreciate your feedback, please fork it and send me a pull-request in github.
 
 h2. Copyright and Legal Stuff
 
 Who cares? This is under the "WTFPL":http://wiki.alcidesfonseca.com/licenses/WTFPL and it was originally coded by "Alcides Fonseca":http://alcidesfonseca.com
+
+h2. Short Guide
+
+Well, first of all you need ssh access to a webserver where your copy of your github repo will live in.
+
+h3. Requirements:
+
+* Git (DUH!)
+* Ruby
+* gem install sinatra
+* gem install yaml
+* gem install json
+
+Now you should ssh into the server and generate a public/private pair of keys, without pass-phrase: @ssh-keygen@
+
+Now copy the content of your public key (@cat .ssh/id_rsa.pub@) and paste it as a new Deploy key in your github admin panel.
+
+Now create a folder to host all your repositories. Mine is ~/git/ and save it for later. The clone your github repository.
+
+Now you should deploy this sinatra app. Since I use dreamhost, I followed "this instructions":http://www.gittr.com/index.php/archive/deploying-rack-apps-on-dreamhost-via-passenger-including-sinatra/
+
+Remember to edit repos.yml with the folder that host all your git repos, and the pair of remote: local repository names. (Probably the same)
+
+Now go to Github admin panel, and add a new webhook service with the URL your sinatra app lives in.
+
+And that's it!
