@@ -30,7 +30,7 @@ Now create a folder to host all your repositories. Mine is ~/git/ and save it fo
 
 Now you should deploy this sinatra app. Since I use dreamhost, I followed "this instructions":http://www.gittr.com/index.php/archive/deploying-rack-apps-on-dreamhost-via-passenger-including-sinatra/
 
-Remember to edit repos.yml with the folder that host all your git repos, and the pair of remote: local repository names. (Probably the same)
+Remember to edit repos.yml with the folder that host all your git repos, and the pair of remote: local repository names. (Probably the same.) Your remote name can be found in http://github.com/username/remote/ and your local name is the folder that contains your git repo.
 
 Now go to Github admin panel, and add a new webhook service with the URL your sinatra app lives in.
 
