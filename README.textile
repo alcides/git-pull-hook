@@ -1,0 +1,7 @@
+h1. git-fetch-hook
+
+This is a Sinatra simple app that accepts POST requests from "GitHub":http://github.com "post-receive-hooks":http://github.com/guides/post-receive-hooks and performs a @git fetch@ in the corresponding local git repository.
+
+h2. Copyright and Legal Stuff
+
+Who cares? This is under the "WTFPL":http://wiki.alcidesfonseca.com/licenses/WTFPL and it was originally coded by "Alcides Fonseca":http://alcidesfonseca.com
