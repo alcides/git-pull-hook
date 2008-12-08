@@ -6,5 +6,5 @@ Sinatra::Application.default_options.merge!(
   :env => :production
 )
  
-require 'git-fetch-hook.rb'
+require 'git-pull-hook.rb'
 run Sinatra.application
