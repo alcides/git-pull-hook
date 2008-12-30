@@ -18,9 +18,7 @@ h3. Requirements:
 
 * Git (DUH!)
 * Ruby
-* gem install sinatra
-* gem install yaml
-* gem install json
+* gem install sinatra yaml json
 
 Now you should ssh into the server and generate a public/private pair of keys, without pass-phrase: @ssh-keygen@
 
